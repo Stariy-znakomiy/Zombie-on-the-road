@@ -327,14 +327,11 @@ function drawScene() { // основная функция отрисовки с�
                     for (var ekey in benzins) {
                         if (benzins[ekey] != undefined && car != undefined) {
                             if (car.x  > benzins[ekey].x && car.x < benzins[ekey].x + benzins[ekey].w && car.y > benzins[ekey].y && car.y < benzins[ekey].y + benzins[ekey].h) {
-                               
-                                
                                 // включаем звук взрыва #2
                                 benzSound.currentTime = 0;
                                 benzSound.play();
-								 delete benzins[ekey];
-								 benzin = 20;
-								
+				delete benzins[ekey];
+				benzin = 20;				
                             }
                         }
                     }
