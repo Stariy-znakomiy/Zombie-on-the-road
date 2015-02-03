@@ -295,17 +295,10 @@ function drawScene() { // основная функция отрисовки с�
                     for (var ekey in enemies) {
                         if (enemies[ekey] != undefined && car != undefined) {
                             if (car.x  > enemies[ekey].x && car.x < enemies[ekey].x + enemies[ekey].w && car.y > enemies[ekey].y && car.y < enemies[ekey].y + enemies[ekey].h) {
-                               
-                                
                                 // включаем звук взрыва #2
                                 dieSound.currentTime = 0;
-                                dieSound.play();
-								 
-								 NoSave();
-								
-								
-								
-								
+                                dieSound.play();				 
+				NoSave();
                             }
                         }
                     }
