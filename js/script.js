@@ -310,14 +310,11 @@ function drawScene() { // основная функция отрисовки с�
                     for (var ekey in pulies) {
                         if (pulies[ekey] != undefined && car != undefined) {
                             if (car.x  > pulies[ekey].x && car.x < pulies[ekey].x + pulies[ekey].w && car.y > pulies[ekey].y && car.y < pulies[ekey].y + pulies[ekey].h) {
-                               
-                                
                                 // включаем звук взрыва #2
                                 explodeSound3.currentTime = 0;
                                 explodeSound3.play();
-								 delete pulies[ekey];
-								 puli += 10;
-								
+				delete pulies[ekey];
+				 puli += 10;				
                             }
                         }
                     }
