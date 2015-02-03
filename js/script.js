@@ -198,14 +198,11 @@ function drawScene() { // основная функция отрисовки с�
         for (var ekey in enemies) {
             if (enemies[ekey] != undefined) {
                // ctx.drawImage(enemies[ekey].image,  enemies[ekey].x, enemies[ekey].y);
-				ctx.drawImage(enemies[ekey].image, iSprPosZomb*enemies[ekey].w, iSprDirZomb*enemies[ekey].h, enemies[ekey].w, enemies[ekey].h, enemies[ekey].x, enemies[ekey].y, enemies[ekey].w, enemies[ekey].h);
-                enemies[ekey].x += enemies[ekey].speed;
-				
-				
+		ctx.drawImage(enemies[ekey].image, iSprPosZomb*enemies[ekey].w, iSprDirZomb*enemies[ekey].h, enemies[ekey].w, enemies[ekey].h, enemies[ekey].x, enemies[ekey].y, enemies[ekey].w, enemies[ekey].h);
+                enemies[ekey].x += enemies[ekey].speed;		
                 if (enemies[ekey].x < - iEnemyW) {
                     delete enemies[ekey];
-					zombiFailed = zombiFailed + 1;
-					
+		zombiFailed = zombiFailed + 1;			
                     // включаем звук смеха 
                     laughtSound.currentTime = 0;
                     laughtSound.play();
