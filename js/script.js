@@ -610,7 +610,6 @@ $(function(){
         clearInterval(puTimer);
         var randY = getRand(0, canvas.height - iPuliH);
         pulies.push(new Puli(canvas.width, randY, iPuliW, iPuliH, - iPuliSpeed, oPuliImage));
-
         var interval = getRand(5000, 7000);
         puTimer = setInterval(addPuli, interval); // повторение кадров
     }
