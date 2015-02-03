@@ -621,7 +621,6 @@ $(function(){
         clearInterval(beTimer);
         var randY = getRand(0, canvas.height - iBenzH);
         benzins.push(new Benzin(canvas.width, randY, iBenzW, iBenzH, - iBenzSpeed, oBenzImage));
-
         var interval = getRand(8000, 10000);
         beTimer = setInterval(addBenz, interval); // повторение кадров
     }
