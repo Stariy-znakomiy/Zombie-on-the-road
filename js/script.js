@@ -594,7 +594,6 @@ $(function(){
     var enTimer = null;
     function addEnemy() {
         clearInterval(enTimer);
-
 		var speedZomb = getRand(3,10); // случайная скорость зомби
         var randY = getRand(0, canvas.height - iEnemyH);
         enemies.push(new Enemy(canvas.width, randY, iEnemyW, iEnemyH, - speedZomb, oEnemyImage));
